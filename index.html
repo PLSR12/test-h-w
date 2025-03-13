@@ -1,14 +1,203 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste H&W</title>
+    <title>Neumax Drops - Suplemento para Melhoria Cognitiva</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/cleave.js"></script>
+    <script src="script.js"></script>
 </head>
 
 <body>
-    <h1>Teste</h1>
+    <div id="container-content">
+        <!-- Cabeçalho -->
+        <header id="sticky-header" class="bg-dark p-3 shadow-sm">
+            <div class="container text-center">
+                <h1 class="text-warning">POTENCIALIZE SUA MENTE COM NEUMAX DROPS!</h1>
+                <p class="text-white">O suplemento natural que turbina seu cérebro e aumenta sua produtividade.</p>
+            </div>
+        </header>
+
+        <!-- Formulário de Captura -->
+        <section id="lead-form-section" class="bg-light py-5">
+            <div class="container">
+                <h2 class="text-center mb-4">Cadastre-se e Ganhe 30% de Desconto!</h2>
+                <form id="lead-form" class="mt-3">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="email" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="phone" class="form-label">Telefone</label>
+                        <input type="text" class="form-control" id="phone" required>
+                    </div>
+                    <button type="submit" class="btn btn-warning w-100">QUERO MEU DESCONTO!</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Página do Produto -->
+        <section id="product-page" class="d-none">
+            <!-- Carrossel de Destaques -->
+            <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="assets/banner-neumax.webp" class="d-block w-100" alt="Neumax Drops">
+                        <div class="carousel-caption d-none d-md-block bg-dark p-3 opacity-75">
+                            <h5>Mais Foco e Memória</h5>
+                            <p>Experimente o poder da natureza para turbinar seu cérebro!</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="assets/banner-neumax(2).webp" class="d-block w-100" alt="Neumax Drops">
+                        <div class="carousel-caption d-none d-md-block bg-dark p-3 opacity-75">
+                            <h5>100% Natural e Seguro</h5>
+                            <p>Feito com ingredientes selecionados para sua saúde mental.</p>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </a>
+                <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <!-- Sobre o Produto -->
+            <section id="about">
+                <h2 id="user-name" class="text-center"></h2>
+                <h3 id="cat-user-section" class="text-center">Você está a um passo de turbinar sua mente!</h3>
+                <p class="lead">Neumax Drops é um suplemento 100% natural desenvolvido para potencializar sua capacidade
+                    cerebral. Sua fórmula exclusiva combina ingredientes cuidadosamente selecionados para melhorar o
+                    foco, a cognição e a memorização, ajudando você a alcançar um desempenho mental superior no dia a
+                    dia.</p>
+                <p>Seja para estudos, trabalho ou simplesmente para manter sua mente afiada, Neumax Drops é a escolha
+                    ideal para quem busca mais clareza mental e energia cognitiva de forma natural e segura.</p>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">✅ Aumenta o foco e a concentração</li>
+                    <li class="list-group-item">✅ Melhora a memória de curto e longo prazo</li>
+                    <li class="list-group-item">✅ Reduz o cansaço mental</li>
+                    <li class="list-group-item">✅ 100% natural e seguro</li>
+                </ul>
+            </section>
+
+            <!-- Galeria do Produto -->
+            <section class="gallery p-5 text-center">
+                <h3 class="text-center mb-4">Galeria do Produto</h3>
+                <div class="row">
+                    <div class="col-md-4 g-4">
+                        <img src="assets/neumax-img.jpg" class="img-thumbnail gallery-img" alt="Neumax Drops">
+                    </div>
+                    <div class="col-md-4 g-4">
+                        <img src="assets/neumax-img(3).jpg" class="img-thumbnail gallery-img" alt="Neumax Drops">
+                    </div>
+                    <div class="col-md-4 g-4">
+                        <img src="assets/neumax-img(2).jpg" class="img-thumbnail gallery-img" alt="Neumax Drops">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Depoimentos -->
+            <section class="testimonials">
+                <h3 class="text-center mb-4">O que nossos clientes dizem:</h3>
+                <div class="carousel slide" id="testimonial-carousel" data-bs-ride="false">
+                    <div class="carousel-inner">
+                        <!-- Item 1 (Ativo) -->
+                        <div class="carousel-item active">
+                            <div class="card p-4">
+                                <p>"Ótimo produto! Minha produtividade no trabalho aumentou muito depois que comecei a
+                                    usar Neumax Drops."</p>
+                                <p class="text-center fw-bold">- João Fernandes</p>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="carousel-item">
+                            <div class="card p-4">
+                                <p>"Muito satisfeito com a compra. Minha memória melhorou e me sinto mais disposto para
+                                    estudar."</p>
+                                <p class="text-center fw-bold">- Cleiton Silva</p>
+                            </div>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="carousel-item">
+                            <div class="card p-4">
+                                <p>"Neumax Drops mudou minha vida! Agora consigo me concentrar por horas sem me
+                                    distrair."</p>
+                                <p class="text-center fw-bold">- Maria Souza</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Controles do Carrossel -->
+                    <a class="carousel-control-prev d-none" href="#testimonial-carousel" role="button"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </a>
+                    <a class="carousel-control-next d-none" href="#testimonial-carousel" role="button"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Contador Regressivo -->
+            <section class="countdown text-center  py-5">
+                <h3>Seu desconto irá expirar em:</h3>
+                <div id="timer" class="fs-2 fw-bold">00:00:00</div>
+                <button class="btn btn-danger mt-3">APROVEITE AGORA!</button>
+            </section>
+        </section>
+
+        <!-- Rodapé -->
+        <footer class="bg-dark text-white py-5">
+            <div class="container">
+                <div class="row justify-content-center text-center mb-4">
+                    <div class="col-6 col-md-auto mb-3 mb-md-0">
+                        <a href="#" class="text-white text-decoration-none">Políticas de Privacidade</a>
+                    </div>
+                    <div class="col-6 col-md-auto mb-3 mb-md-0">
+                        <a href="#" class="text-white text-decoration-none">Fale Conosco</a>
+                    </div>
+                    <div class="col-6 col-md-auto mb-3 mb-md-0">
+                        <a href="#" class="text-white text-decoration-none">Termos e Condições</a>
+                    </div>
+                    <div class="col-6 col-md-auto mb-3 mb-md-0">
+                        <a href="#" class="text-white text-decoration-none">Trabalhe Conosco</a>
+                    </div>
+                </div>
+
+                <div class="row justify-content-center mb-4">
+                    <div class="col-auto">
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="text-white me-3">
+                            <i class="fab fa-facebook fa-lg"></i>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="text-white me-3">
+                            <i class="fab fa-instagram fa-lg"></i>
+                        </a>
+                        <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="text-white">
+                            <i class="fab fa-linkedin fa-lg"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p class="mb-0">&copy; 2025 Neumax Drops. Todos os direitos reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
